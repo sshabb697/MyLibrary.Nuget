@@ -41,6 +41,9 @@ stages:
         packagesToPack: '**/*.csproj'
         versioningScheme: 'byEnvVar'
         versionEnvVar: 'version'
+    - task: NuGetAuthenticate@1
+      inputs:
+       nuGetServiceConnections: 'connection to nuget'
 
     - task: DotNetCoreCLI@2
       displayName: Push Nuget Package
