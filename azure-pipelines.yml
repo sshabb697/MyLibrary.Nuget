@@ -23,6 +23,7 @@ stages:
         command: 'restore'
         projects: '**/*.csproj'
         feedsToUse: 'select'
+        vstsFeed: '4d8a23d7-cd66-4dd2-bbe1-1a0e9a7fe307'
 
     - task: DotNetCoreCLI@2
       displayName: Build Apps
